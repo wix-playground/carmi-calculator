@@ -2,7 +2,9 @@ const { root, setter } = require('carmi');
 
 const model = {
   setExpression: setter('expression'),
-  getExpression: root.get('expression')
+  expression: root.get('expression'),
+  clearOnNextAction: root.get('clearOnNextAction'),
+  setClearOnNextAction: setter('clearOnNextAction')
 };
 
 module.exports = model;

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "update-assets": " cp -f ./src/*.html ./dist/",
-    "build": "npm run update-assets && webpack",
+    "update-assets": "cp -f ./src/*.html ./dist/",
+    "update-docs": "rm -rf ./docs && cp -r ./dist ./docs",
+    "build": "npm run update-assets && webpack && npm run update-docs",
     "start": "npm run update-assets && webpack-dev-server"
   },
   "devDependencies": {
